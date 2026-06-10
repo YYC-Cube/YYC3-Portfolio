@@ -27,7 +27,7 @@ const DRAGGABLE_BOUNDS = {
   bottom: typeof window !== "undefined" ? window.innerHeight - 20 : 1080,
 };
 
-export function AIAssistant({ isMobile }: AIAssistantProps) {
+export function AIAssistant({ isMobile = false }: AIAssistantProps) {
   const {
     isOpen,
     isMaximized,
