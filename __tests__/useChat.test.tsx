@@ -1,16 +1,17 @@
 import { describe, it, expect, vi } from "vitest"
 import { render } from "@testing-library/react"
+import type React from "react"
 import { useChat } from "@/app/components/ai-assistant/hooks/useChat"
 
 // mock framer-motion
 vi.mock("framer-motion", () => ({
   motion: {
-    header: ({ children, ...props }: Record<string, unknown>) => <header {...props}>{children}</header>,
-    div: ({ children, ...props }: Record<string, unknown>) => <div {...props}>{children}</div>,
-    svg: ({ children, ...props }: Record<string, unknown>) => <svg {...props}>{children}</svg>,
-    button: ({ children, ...props }: Record<string, unknown>) => <button {...props}>{children}</button>,
+    header: ({ children, ...props }: React.PropsWithChildren<Record<string, string>>) => <header {...props}>{children}</header>,
+    div: ({ children, ...props }: React.PropsWithChildren<Record<string, string>>) => <div {...props}>{children}</div>,
+    svg: ({ children, ...props }: React.PropsWithChildren<Record<string, string>>) => <svg {...props}>{children}</svg>,
+    button: ({ children, ...props }: React.PropsWithChildren<Record<string, string>>) => <button {...props}>{children}</button>,
   },
-  AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+  AnimatePresence: ({ children }: React.PropsWithChildren) => <>{children}</>,
   useScroll: () => ({ scrollYProgress: { get: () => 0 } }),
   useSpring: (val: unknown) => val,
   useTransform: (val: unknown) => val,

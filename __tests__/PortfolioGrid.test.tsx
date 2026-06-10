@@ -1,18 +1,19 @@
+import { describe, it, expect, vi } from "vitest"
+import { render, screen, fireEvent } from "@testing-library/react"
+import type React from "react"
 import PortfolioGrid from "@/app/components/PortfolioGrid"
-import { fireEvent, render, screen } from "@testing-library/react"
-import { describe, expect, it, vi } from "vitest"
 
 // mock framer-motion
 vi.mock("framer-motion", () => ({
   motion: {
-    div: ({ children, ...props }: Record<string, unknown>) => <div {...props}>{children}</div>,
+    div: ({ children, ...props }: React.PropsWithChildren<Record<string, string>>) => <div {...props}>{children}</div>,
   },
-  AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
+  AnimatePresence: ({ children }: React.PropsWithChildren) => <>{children}</>,
 }))
 
 // mock next/image
 vi.mock("next/image", () => ({
-  default: ({ src, alt, ...props }: Record<string, unknown>) => <img src={src} alt={alt} {...props} />,
+  default: ({ src, alt, ...props }: { src: string; alt: string } & Record<string, string>) => <img src={src} alt={alt} {...props} />,
 }))
 
 describe("PortfolioGrid", () => {
