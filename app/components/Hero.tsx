@@ -21,7 +21,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            极简设计与花艺美学的完美融合。YYC³ 言启象限，语枢未来 — 打造优雅的智能视觉体验，为您的空间注入灵感与格调。
+            「五高五标五化五维」为骨架，构建面向AI时代的智能应用开发范式。融合现代软件工程最佳实践与人工智能前沿技术，为团队提供从架构设计到落地实施的全链路指导框架。
           </motion.p>
           <motion.div
             className="mt-10 flex items-center gap-x-6"

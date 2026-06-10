@@ -12,9 +12,9 @@ export default function WearYourStory() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6">讲述你的故事</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6">YanYuCloudCube</h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-            Flowers & Saints 的每一件作品都是您独特叙事的画布。我们的设计将极简美学与自然之美相融合，让您尽情表达个性。
+            「五高五标五化五维」为骨架，构建面向AI时代的智能应用开发范式。融合现代软件工程最佳实践与人工智能前沿技术，为团队提供从架构设计到落地实施的全链路指导框架。
           </p>
           <motion.div
             className="mt-10"

@@ -5,41 +5,41 @@ import { useRef, useState } from "react"
 
 const timelineEvents = [
   {
-    year: 2018,
-    title: "Flowers & Saints 成立",
-    description: "我们的旅程始于对极简设计和花艺美学的热爱。",
-    details:
-      "由 Jane Doe 和 John Smith 创立，Flowers & Saints 起源于悉尼 Surry Hills 的一间小工作室，融合了他们对极简设计和植物美学的热爱。",
-  },
-  {
-    year: 2019,
-    title: "首次大型展览",
-    description: "在悉尼设计节展示数字艺术与花艺装置的独特融合。",
-    details: "我们的展览「数字绽放」吸引了超过 10,000 名参观者，因其创新地将科技与自然元素相结合而广受好评。",
-  },
-  {
-    year: 2020,
-    title: "线上商店启动",
-    description: "将我们的创作带入数字世界，拓展全球影响力。",
-    details: "为应对全球变化，我们转向电子商务，向全球观众提供独特设计和虚拟花艺工作坊。",
-  },
-  {
     year: 2021,
-    title: "与顶级品牌合作",
-    description: "与领先生活方式品牌合作打造独家系列。",
-    details: "我们的合作包括与澳大利亚时装品牌 Zimmermann 推出限量版印花，以及与 Aesop 合作定制香氛系列。",
+    title: "YanYuCloudCube 创立",
+    description: "以「五高五标五化五维」理念为骨架，开启智能应用开发之旅。",
+    details:
+      "YanYuCloudCube 团队成立，确立了以高可用、高性能、高安全、高可扩展、高智能为核心架构原则，构建面向 AI 时代的智能应用开发范式。",
   },
   {
     year: 2022,
-    title: "国际认可",
-    description: "荣获享有盛誉的国际花艺设计大奖。",
-    details: "我们的「空灵回响」装置作品结合全息投影与鲜花，在切尔西花展上荣获金奖。",
+    title: "核心框架成型",
+    description: "完成全链路开发框架的设计与验证，建立标准化体系。",
+    details: "「五标」标准化体系正式落地，覆盖标准化、规范化、自动化、可视化、智能化五大维度，为团队提供从架构设计到落地实施的全链路指导。",
   },
   {
     year: 2023,
-    title: "实体店扩张",
-    description: "在悉尼市中心开设首家旗舰店。",
-    details: "我们的 Bondi Beach 店铺打造沉浸式零售体验，融合数字装置与精选花艺作品及生活方式产品。",
+    title: "智能化升级",
+    description: "深度融合人工智能前沿技术，实现开发流程的智能化转型。",
+    details: "将大语言模型、智能代码生成、自动化测试等 AI 能力深度融入开发全流程，实现「五化」转型：流程化、数字化、生态化、工具化、服务化。",
+  },
+  {
+    year: 2024,
+    title: "生态体系构建",
+    description: "拓展技术生态，打造开放、协作的智能应用开发社区。",
+    details: "建立开放的技术生态体系，连接上下游开发者与合作伙伴，构建从需求分析、架构设计、开发实施到运维保障的完整生态闭环。",
+  },
+  {
+    year: 2025,
+    title: "全链路闭环交付",
+    description: "实现从规划到部署的全链路自动化交付能力。",
+    details: "完成从项目启动、架构设计、开发实施、测试审核、交付部署到运维保障的全链路闭环自动化交付，大幅提升交付效率与质量。",
+  },
+  {
+    year: 2026,
+    title: "迈向 AI 原生时代",
+    description: "全面拥抱 AI 原生开发范式，引领行业智能化变革。",
+    details: "以五维评价体系（时间维度、空间维度、属性维度、事件维度、关联维度）为指引，全面实现 AI 原生应用开发，为行业提供可复制、可扩展的智能化解决方案。",
   },
 ]
 
@@ -88,7 +88,7 @@ export default function Timeline() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">我们的历程</h2>
-          <p className="mt-4 text-lg text-muted-foreground">Flowers & Saints 多年来的发展演变</p>
+          <p className="mt-4 text-lg text-muted-foreground">YanYuCloudCube 多年来的发展演变</p>
         </motion.div>
 
         <div className="relative">
