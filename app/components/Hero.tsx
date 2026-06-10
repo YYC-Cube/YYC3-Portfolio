@@ -13,7 +13,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <span className="text-gradient">YYC³ Portfolio</span>
+            <span className="text-gradient">YanYuCloudCube</span>
           </motion.h1>
           <motion.p
             className="mt-6 text-lg leading-8 text-muted-foreground"
@@ -56,7 +56,7 @@ export default function Hero() {
           <div className="relative">
             <img
               src="/yyc3-Family.png"
-              alt="YYC³ Family 设计理念"
+              alt="YanYuCloudCube 设计理念"
               width={600}
               height={600}
               className="w-[500px] rounded-2xl shadow-xl ring-1 ring-gray-900/10"

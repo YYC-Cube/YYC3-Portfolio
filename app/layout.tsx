@@ -19,8 +19,8 @@ export const metadata = {
   },
   manifest: "/yyc3-dist/manifest.json",
   openGraph: {
-    title: "YYC³ Portfolio",
-    description: "言启象限 · 语枢未来 — YYC³ 智能应用链创意作品集",
+    title: "YanYuCloudCube",
+    description: "言启千行代码 · 语枢万物智能 — YanYuCloudCube 智能应用开发框架",
     images: ["/yyc3-Family.png"],
   },
 }

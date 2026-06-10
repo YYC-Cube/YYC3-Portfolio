@@ -19,7 +19,7 @@ export default function Footer() {
           ))}
         </nav>
         <p className="mt-10 text-center text-sm leading-5 text-muted-foreground">
-          由 YYC³ Team 用心设计与开发 ❤️ 版权所有 © YanYuCloudCube
+          由 YanYuCloudCube Team 用心设计与开发 ❤️ 版权所有 © YanYuCloudCube
         </p>
       </div>
     </footer>

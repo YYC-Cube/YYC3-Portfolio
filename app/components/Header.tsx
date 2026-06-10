@@ -1,10 +1,10 @@
 "use client"
 
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { useTheme } from "next-themes"
-import { motion } from "framer-motion"
 import { MoonIcon, SunIcon } from "@heroicons/react/24/outline"
+import { motion } from "framer-motion"
+import { useTheme } from "next-themes"
+import Link from "next/link"
+import { useEffect, useState } from "react"
 
 export default function Header() {
   const [mounted, setMounted] = useState(false)
@@ -22,11 +22,11 @@ export default function Header() {
       <nav className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="全局导航">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
-            <span className="sr-only">YYC³ Portfolio</span>
+            <span className="sr-only">YanYuCloudCube</span>
             <img
               className="h-8 w-auto"
               src="/yyc3-dist/yanyu_cloud_128x128.png"
-              alt="YYC³ 标志"
+              alt="YanYuCloudCube 标志"
             />
           </Link>
         </div>
