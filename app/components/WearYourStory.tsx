@@ -12,9 +12,9 @@ export default function WearYourStory() {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6">YanYuCloudCube</h2>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold text-foreground mb-6">驱动智能未来</h2>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto">
-            「五高五标五化五维」为骨架，构建面向AI时代的智能应用开发范式。融合现代软件工程最佳实践与人工智能前沿技术，为团队提供从架构设计到落地实施的全链路指导框架。
+            以「五高五标五化五维」为骨架，构建面向AI时代的智能应用开发范式。融合现代软件工程最佳实践与人工智能前沿技术，为团队提供从架构设计到落地实施的全链路指导框架。
           </p>
           <motion.div
             className="mt-10"
@@ -23,12 +23,12 @@ export default function WearYourStory() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <a
-              href="https://www.flowersandsaints.com.au"
+              href="/docs/YYC3-团队核心-五维驱动.md"
               target="_blank"
               rel="noopener noreferrer"
               className="apple-button inline-flex items-center"
             >
-              探索系列
+              探索体系
               <svg
                 className="w-5 h-5 ml-2"
                 fill="none"

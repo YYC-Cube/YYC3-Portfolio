@@ -1,55 +1,55 @@
 "use client"
 
-import { motion, useInView, useScroll, useSpring, useTransform, type MotionValue } from "framer-motion"
+import { motion, useInView, useScroll, useSpring, useTransform } from "framer-motion"
 import { useRef, useState } from "react"
 
 const timelineEvents = [
   {
     year: 2021,
-    title: "YanYuCloudCube 创立",
-    description: "以「五高五标五化五维」理念为骨架，开启智能应用开发之旅。",
+    title: "YYC³ 核心理念奠基",
+    description: "确立「五高架构」为团队技术哲学核心。",
     details:
-      "YanYuCloudCube 团队成立，确立了以高可用、高性能、高安全、高可扩展、高智能为核心架构原则，构建面向 AI 时代的智能应用开发范式。",
+      "YanYuCloudCube 团队正式提出五高架构理念——高可用、高性能、高安全、高扩展、高智能，为面向AI时代的智能应用开发奠定理论基石。",
   },
   {
     year: 2022,
-    title: "核心框架成型",
-    description: "完成全链路开发框架的设计与验证，建立标准化体系。",
-    details: "「五标」标准化体系正式落地，覆盖标准化、规范化、自动化、可视化、智能化五大维度，为团队提供从架构设计到落地实施的全链路指导。",
+    title: "五标体系构建",
+    description: "标准化、规范化、自动化、可视化、智能化体系成型。",
+    details: "五标体系全面落地，实现从代码规范到部署流程的全链路标准化管理，显著提升团队研发效能与交付质量。",
   },
   {
     year: 2023,
-    title: "智能化升级",
-    description: "深度融合人工智能前沿技术，实现开发流程的智能化转型。",
-    details: "将大语言模型、智能代码生成、自动化测试等 AI 能力深度融入开发全流程，实现「五化」转型：流程化、数字化、生态化、工具化、服务化。",
+    title: "五化驱动引擎发布",
+    description: "过程化→数字化→生态化→工具化→服务化转型升级。",
+    details: "五化驱动模型正式发布，为团队提供从传统开发模式向AI驱动、服务导向的现代化开发范式的完整转型路径。",
   },
   {
     year: 2024,
-    title: "生态体系构建",
-    description: "拓展技术生态，打造开放、协作的智能应用开发社区。",
-    details: "建立开放的技术生态体系，连接上下游开发者与合作伙伴，构建从需求分析、架构设计、开发实施到运维保障的完整生态闭环。",
+    title: "五维评估框架上线",
+    description: "时间、空间、属性、事件、关联五维全面评估体系。",
+    details: "五维评估框架正式投入项目实践，实现了从单一指标评估到多维度、全视角的综合性项目质量评估体系。",
   },
   {
     year: 2025,
-    title: "全链路闭环交付",
-    description: "实现从规划到部署的全链路自动化交付能力。",
-    details: "完成从项目启动、架构设计、开发实施、测试审核、交付部署到运维保障的全链路闭环自动化交付，大幅提升交付效率与质量。",
+    title: "行业认可与技术输出",
+    description: "五高五标五化五维体系获得行业广泛认可。",
+    details: "YYC³ 核心理念在多个大型项目成功验证，技术博客与开源贡献获得开发者社区广泛关注与认可。",
   },
   {
     year: 2026,
-    title: "迈向 AI 原生时代",
-    description: "全面拥抱 AI 原生开发范式，引领行业智能化变革。",
-    details: "以五维评价体系（时间维度、空间维度、属性维度、事件维度、关联维度）为指引，全面实现 AI 原生应用开发，为行业提供可复制、可扩展的智能化解决方案。",
+    title: "AI 深度融合",
+    description: "全面整合人工智能技术到全链路开发流程。",
+    details: "将AI能力深度嵌入从需求分析、架构设计到代码生成、测试部署的全流程，实现了「高智能」架构的全面落地。",
   },
 ]
 
-const FlowerIcon = ({ progress }: { progress: MotionValue<number> }) => (
-  <motion.svg
+const FlowerIcon = ({ progress }: { progress: number }) => (
+  <svg
     viewBox="0 0 24 24"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
     className="w-6 h-6"
-    style={{ scale: progress }}
+    style={{ transform: `scale(${progress})` }}
   >
     <path
       d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z"
@@ -61,7 +61,7 @@ const FlowerIcon = ({ progress }: { progress: MotionValue<number> }) => (
       stroke="currentColor"
       strokeWidth="2"
     />
-  </motion.svg>
+  </svg>
 )
 
 export default function Timeline() {
@@ -88,7 +88,7 @@ export default function Timeline() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">我们的历程</h2>
-          <p className="mt-4 text-lg text-muted-foreground">YanYuCloudCube 多年来的发展演变</p>
+          <p className="mt-4 text-lg text-muted-foreground">YYC³ 五高五标五化五维体系的发展演变</p>
         </motion.div>
 
         <div className="relative">
@@ -103,7 +103,7 @@ export default function Timeline() {
             className="sticky top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-primary"
             style={{ y: useTransform(scrollYProgress, [0, 1], [0, 100]) }}
           >
-            <FlowerIcon progress={useTransform(scrollYProgress, [0, 1], [0.5, 1])} />
+            <FlowerIcon progress={useTransform(scrollYProgress, [0, 1], [0.5, 1]) as any} />
           </motion.div>
 
           {timelineEvents.map((event, index) => (

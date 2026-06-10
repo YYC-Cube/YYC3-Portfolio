@@ -78,9 +78,7 @@ export default function FeatureCarousel() {
                 </div>
                 <div className="mt-4">
                   <a
-                    href="https://www.flowersandsaints.com.au"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/#"
                     className="text-primary hover:underline"
                   >
                     了解更多 →

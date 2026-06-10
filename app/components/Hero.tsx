@@ -21,7 +21,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            「五高五标五化五维」为骨架，构建面向AI时代的智能应用开发范式。融合现代软件工程最佳实践与人工智能前沿技术，为团队提供从架构设计到落地实施的全链路指导框架。
+            「五高五标五化五维」为骨架，构建面向AI时代的智能应用开发范式。该机制融合现代软件工程最佳实践与人工智能前沿技术，为团队提供从架构设计到落地实施的全链路指导框架。
           </motion.p>
           <motion.div
             className="mt-10 flex items-center gap-x-6"
@@ -30,15 +30,13 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <a
-              href="https://www.flowersandsaints.com.au"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/#portfolio"
               className="apple-button"
             >
               探索作品
             </a>
             <a
-              href="https://www.flowersandsaints.com.au"
+              href="/docs/YYC3-团队核心-五维驱动.md"
               target="_blank"
               rel="noopener noreferrer"
               className="text-sm font-semibold leading-6 text-foreground"

@@ -25,32 +25,26 @@ export default function Header() {
             <span className="sr-only">YanYuCloudCube</span>
             <img
               className="h-8 w-auto"
-              src="/yyc3-dist/yanyu_cloud_128x128.png"
+              src="/yyc3-logo-blue/android/playstore-icon.png"
               alt="YanYuCloudCube 标志"
             />
           </Link>
         </div>
         <div className="flex gap-x-12">
           <Link
-            href="https://www.flowersandsaints.com.au"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/#portfolio"
             className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
           >
             作品展示
           </Link>
           <Link
-            href="https://www.flowersandsaints.com.au"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/#about"
             className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
           >
             关于我们
           </Link>
           <Link
-            href="https://www.flowersandsaints.com.au"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/#contact"
             className="text-sm font-semibold leading-6 text-foreground hover:text-primary transition-colors"
           >
             联系方式

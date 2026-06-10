@@ -8,9 +8,7 @@ export default function Footer() {
           {["关于我们", "作品展示", "服务项目", "联系方式", "隐私政策", "使用条款"].map((item) => (
             <div key={item} className="pb-6">
               <Link
-                href="https://www.flowersandsaints.com.au"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="/"
                 className="text-sm leading-6 text-muted-foreground hover:text-foreground"
               >
                 {item}
@@ -19,7 +17,7 @@ export default function Footer() {
           ))}
         </nav>
         <p className="mt-10 text-center text-sm leading-5 text-muted-foreground">
-          由 YanYuCloudCube Team 用心设计与开发 ❤️ 版权所有 © YanYuCloudCube
+          © 2026 YanYuCloudCube. 以五高五标五化五维为驱动，构建面向AI时代的智能应用开发范式。
         </p>
       </div>
     </footer>

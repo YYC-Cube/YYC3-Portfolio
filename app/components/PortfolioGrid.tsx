@@ -7,94 +7,45 @@ import { useState } from "react"
 const projects = [
   {
     id: 1,
-    title: "YYC3-00",
-    description: "YanYuCloudCube 智能应用项目展示",
-    imageUrl: "/Project-Screenshot/YYC3-00.png",
-    category: "项目展示",
+    title: "极简品牌视觉",
+    description: "为科技初创公司打造简洁现代的视觉传达系统",
+    imageUrl: "/Project-Screenshot/YYC3-01.png",
+    category: "品牌设计",
   },
   {
     id: 2,
-    title: "YYC3-01",
-    description: "YanYuCloudCube 智能应用项目展示",
-    imageUrl: "/Project-Screenshot/YYC3-01.png",
-    category: "项目展示",
+    title: "优雅网页体验",
+    description: "为奢侈时尚品牌打造精致的线上形象",
+    imageUrl: "/Project-Screenshot/YYC3-02.png",
+    category: "网页设计",
   },
   {
     id: 3,
-    title: "YYC3-02",
-    description: "YanYuCloudCube 智能应用项目展示",
-    imageUrl: "/Project-Screenshot/YYC3-02.png",
-    category: "项目展示",
+    title: "直观移动应用",
+    description: "为健康养生公司设计用户友好的应用界面",
+    imageUrl: "/Project-Screenshot/YYC3-03.png",
+    category: "移动应用",
   },
   {
     id: 4,
-    title: "YYC3-03",
-    description: "YanYuCloudCube 智能应用项目展示",
-    imageUrl: "/Project-Screenshot/YYC3-03.png",
-    category: "项目展示",
+    title: "精致数字营销",
+    description: "为豪华汽车品牌策划高端营销策略",
+    imageUrl: "/Project-Screenshot/YYC3-04.png",
+    category: "数字营销",
   },
   {
     id: 5,
-    title: "YYC3-04",
-    description: "YanYuCloudCube 智能应用项目展示",
-    imageUrl: "/Project-Screenshot/YYC3-04.png",
-    category: "项目展示",
+    title: "精炼 UI/UX 设计",
+    description: "为金融服务平台打造流畅的用户界面",
+    imageUrl: "/Project-Screenshot/YYC3-05.png",
+    category: "UI/UX",
   },
   {
     id: 6,
-    title: "YYC3-05",
-    description: "YanYuCloudCube 智能应用项目展示",
-    imageUrl: "/Project-Screenshot/YYC3-05.png",
-    category: "项目展示",
-  },
-  {
-    id: 7,
-    title: "YYC3-06",
-    description: "YanYuCloudCube 智能应用项目展示",
+    title: "极简产品设计",
+    description: "为智能家居设备打造简洁实用的外观",
     imageUrl: "/Project-Screenshot/YYC3-06.png",
-    category: "项目展示",
-  },
-  {
-    id: 8,
-    title: "YYC3-07",
-    description: "YanYuCloudCube 智能应用项目展示",
-    imageUrl: "/Project-Screenshot/YYC3-07.png",
-    category: "项目展示",
-  },
-  {
-    id: 9,
-    title: "YYC3-08",
-    description: "YanYuCloudCube 智能应用项目展示",
-    imageUrl: "/Project-Screenshot/YYC3-08.png",
-    category: "项目展示",
-  },
-  {
-    id: 10,
-    title: "YYC3-09",
-    description: "YanYuCloudCube 智能应用项目展示",
-    imageUrl: "/Project-Screenshot/YYC3-09.png",
-    category: "项目展示",
-  },
-  {
-    id: 11,
-    title: "YYC3-10",
-    description: "YanYuCloudCube 智能应用项目展示",
-    imageUrl: "/Project-Screenshot/YYC3-10.png",
-    category: "项目展示",
-  },
-  {
-    id: 12,
-    title: "YYC3-11",
-    description: "YanYuCloudCube 智能应用项目展示",
-    imageUrl: "/Project-Screenshot/YYC3-11.png",
-    category: "项目展示",
-  },
-  {
-    id: 13,
-    title: "YYC3-12",
-    description: "YanYuCloudCube 智能应用项目展示",
-    imageUrl: "/Project-Screenshot/YYC3-12.png",
-    category: "项目展示",
+    category: "产品设计",
   },
 ]
 
@@ -106,7 +57,7 @@ export default function PortfolioGrid() {
   const filteredProjects = filter === "全部" ? projects : projects.filter((project) => project.category === filter)
 
   return (
-    <section className="py-20 bg-background">
+    <section id="portfolio" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center mb-12"
@@ -124,8 +75,8 @@ export default function PortfolioGrid() {
               key={category}
               onClick={() => setFilter(category)}
               className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${filter === category
-                  ? "bg-primary text-primary-foreground"
-                  : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
+                ? "bg-primary text-primary-foreground"
+                : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
                 }`}
             >
               {category}
@@ -163,9 +114,7 @@ export default function PortfolioGrid() {
                   <div className="text-sm font-medium text-primary mb-1">{project.category}</div>
                   <h3 className="text-xl font-semibold text-foreground mb-2">{project.title}</h3>
                   <a
-                    href="https://www.flowersandsaints.com.au"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="/#"
                     className="text-primary hover:underline inline-flex items-center"
                   >
                     查看项目
