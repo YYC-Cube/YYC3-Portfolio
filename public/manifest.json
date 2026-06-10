@@ -32,6 +32,12 @@
       "src": "/yyc3-logo-blue/windows/windows/icon-256.png",
       "sizes": "256x256",
       "type": "image/png"
+    },
+    {
+      "src": "/yyc3-logo-blue/android/playstore-icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

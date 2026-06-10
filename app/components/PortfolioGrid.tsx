@@ -69,7 +69,7 @@ export default function PortfolioGrid() {
           <p className="mt-4 text-lg text-muted-foreground">展示我们的极简设计与创意解决方案</p>
         </motion.div>
 
-        <div className="flex justify-center space-x-4 mb-8">
+        <div className="flex justify-center flex-wrap gap-2 mb-8">
           {categories.map((category) => (
             <button
               key={category}

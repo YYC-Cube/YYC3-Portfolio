@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, useInView, useScroll, useSpring, useTransform } from "framer-motion"
+import { motion, useInView, useScroll, useSpring, useTransform, type MotionValue } from "framer-motion"
 import { useRef, useState } from "react"
 
 const timelineEvents = [
@@ -43,7 +43,7 @@ const timelineEvents = [
   },
 ]
 
-const FlowerIcon = ({ progress }: { progress: number }) => (
+const FlowerIcon = ({ progress }: { progress: number | MotionValue<number> }) => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
@@ -94,16 +94,16 @@ export default function Timeline() {
         <div className="relative">
           {/* 垂直时间线 */}
           <motion.div
-            className="absolute left-1/2 transform -translate-x-1/2 w-0.5 h-full bg-primary/20"
+            className="absolute left-4 md:left-1/2 transform md:-translate-x-1/2 w-0.5 h-full bg-primary/20"
             style={{ scaleY: scaleX }}
           />
 
           {/* 花朵图标 */}
           <motion.div
-            className="sticky top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-primary"
+            className="hidden md:block sticky top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-primary"
             style={{ y: useTransform(scrollYProgress, [0, 1], [0, 100]) }}
           >
-            <FlowerIcon progress={useTransform(scrollYProgress, [0, 1], [0.5, 1]) as any} />
+            <FlowerIcon progress={useTransform(scrollYProgress, [0, 1], [0.5, 1]) as number} />
           </motion.div>
 
           {timelineEvents.map((event, index) => (
@@ -138,19 +138,19 @@ function TimelineEvent({
   return (
     <motion.div
       ref={ref}
-      className={`mb-8 flex justify-between items-center w-full ${index % 2 === 0 ? "flex-row-reverse" : ""}`}
+      className={`mb-8 flex items-center w-full ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
       transition={{ duration: 0.8, delay: index * 0.1 }}
     >
-      <div className="w-5/12" />
+      <div className="hidden md:block w-5/12" />
       <div className="z-20">
         <div className="flex items-center justify-center w-8 h-8 bg-primary rounded-full">
           <div className="w-3 h-3 bg-background rounded-full" />
         </div>
       </div>
       <motion.div
-        className="w-5/12 cursor-pointer"
+        className="flex-1 md:w-5/12 cursor-pointer"
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
         onClick={onToggle}

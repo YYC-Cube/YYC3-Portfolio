@@ -57,7 +57,7 @@ export default function Hero() {
               alt="YanYuCloudCube 设计理念"
               width={600}
               height={600}
-              className="w-[500px] rounded-2xl shadow-xl ring-1 ring-gray-900/10"
+              className="w-full max-w-[500px] rounded-2xl shadow-xl ring-1 ring-gray-900/10"
             />
           </div>
         </motion.div>

@@ -7,8 +7,8 @@
  * @version v1.0.0
  */
 
-import { useState, useCallback } from "react";
-import { Cpu, Signal, Loader2 } from "lucide-react";
+import { Cpu, Loader2, Signal } from "lucide-react";
+import { useCallback, useState } from "react";
 
 export interface Model {
   id: string;
@@ -33,8 +33,8 @@ interface ModelTestState {
 export function ModelSelector({ models, selectedId, loading, onSelect }: ModelSelectorProps) {
   const [testStates, setTestStates] = useState<ModelTestState>({});
 
-  const testModel = useCallback(async (modelId: string, e: React.MouseEvent) => {
-    e.stopPropagation();
+  const testModel = useCallback(async (modelId: string, e?: React.MouseEvent) => {
+    e?.stopPropagation();
 
     setTestStates((prev) => ({ ...prev, [modelId]: "testing" }));
 
@@ -89,11 +89,10 @@ export function ModelSelector({ models, selectedId, loading, onSelect }: ModelSe
             <button
               key={model.id}
               onClick={() => onSelect(model.id)}
-              className={`w-full px-3 py-2 rounded-lg text-left transition-all flex items-center gap-2 text-xs ${
-                selectedId === model.id
+              className={`w-full px-3 py-2 rounded-lg text-left transition-all flex items-center gap-2 text-xs ${selectedId === model.id
                   ? "bg-[rgba(0,212,255,0.12)] border border-[rgba(0,212,255,0.3)] text-[#00d4ff]"
                   : "bg-[rgba(0,40,80,0.2)] border border-[rgba(0,180,255,0.08)] text-[rgba(0,212,255,0.5)] hover:border-[rgba(0,180,255,0.2)]"
-              }`}
+                }`}
             >
               {model.isLocal && (
                 <span className="text-[#00ff88] shrink-0 text-xs">本地</span>
@@ -102,13 +101,16 @@ export function ModelSelector({ models, selectedId, loading, onSelect }: ModelSe
               <span className="text-[rgba(0,212,255,0.25)] shrink-0 text-xs">
                 {model.provider}
               </span>
-              <button
-                onClick={(e) => testModel(model.id, e)}
-                className="p-1 rounded hover:bg-[rgba(0,212,255,0.1)] transition-all shrink-0"
+              <span
+                role="button"
+                tabIndex={0}
+                onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.stopPropagation(); testModel(model.id); } }}
+                onClick={(e) => { e.stopPropagation(); testModel(model.id, e); }}
+                className="p-1 rounded hover:bg-[rgba(0,212,255,0.1)] transition-all shrink-0 cursor-pointer"
                 title="测试连接"
               >
                 {getTestIcon(model.id)}
-              </button>
+              </span>
             </button>
           ))}
         </div>
