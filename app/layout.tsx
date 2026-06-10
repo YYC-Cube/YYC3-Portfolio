@@ -4,6 +4,7 @@ import type React from "react"
 import { Toaster } from "sonner"
 import Footer from "./components/Footer"
 import Header from "./components/Header"
+import { PWARegister } from "./components/PWARegister"
 import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
@@ -37,9 +38,16 @@ export const metadata = {
     "msapplication-TileColor": "#2563eb",
     "msapplication-TileImage": "/yyc3-logo-blue/windows/windows/icon-256.png",
     "msapplication-config": "none",
-    "theme-color": "#2563eb",
     "application-name": "YYC³ Portfolio",
   },
+}
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: "#2563eb",
 }
 
 export default function RootLayout({
@@ -55,6 +63,7 @@ export default function RootLayout({
           <main>{children}</main>
           <Footer />
           <Toaster richColors position="top-right" />
+          <PWARegister />
         </ThemeProvider>
       </body>
     </html>

@@ -20,6 +20,11 @@ export interface SettingsPanelProps {
   selectedModel: ModelSelectorProps["selectedId"];
   modelsLoading: ModelSelectorProps["loading"];
   onModelSelect: ModelSelectorProps["onSelect"];
+  ollamaUrl: ModelSelectorProps["ollamaUrl"];
+  onRescan: ModelSelectorProps["onRescan"];
+  onAddModel: ModelSelectorProps["onAddModel"];
+  onRemoveModel: ModelSelectorProps["onRemoveModel"];
+  onOllamaUrlChange: ModelSelectorProps["onOllamaUrlChange"];
   temperature: number;
   onTemperatureChange: (value: number) => void;
   topP: number;
@@ -37,6 +42,11 @@ export function SettingsPanel({
   selectedModel,
   modelsLoading,
   onModelSelect,
+  ollamaUrl,
+  onRescan,
+  onAddModel,
+  onRemoveModel,
+  onOllamaUrlChange,
   temperature,
   onTemperatureChange,
   topP,
@@ -57,6 +67,11 @@ export function SettingsPanel({
         selectedId={selectedModel}
         loading={modelsLoading}
         onSelect={onModelSelect}
+        ollamaUrl={ollamaUrl}
+        onRescan={onRescan}
+        onAddModel={onAddModel}
+        onRemoveModel={onRemoveModel}
+        onOllamaUrlChange={onOllamaUrlChange}
       />
       <ParameterSlider
         label="温度 (Temperature)"

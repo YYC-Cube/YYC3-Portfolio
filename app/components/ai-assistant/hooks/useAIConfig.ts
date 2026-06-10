@@ -2,14 +2,16 @@
 
 /**
  * @file hooks/useAIConfig.ts
- * @description AI 配置状态管理 Hook
+ * @description AI 配置状态管理 Hook（支持本地扫描与自编辑）
  * @author YanYuCloudCube Team
- * @version v1.0.0
+ * @version v2.0.0
  */
 
-import { useCallback, useEffect } from "react";
-import { useModelProvider } from "./stubs/useModelProvider";
+import { useCallback, useEffect, useState } from "react";
+import { useModelProvider, type ModelEntry } from "./stubs/useModelProvider";
 import { useSettingsStore } from "./stubs/useSettingsStore";
+
+export type { ModelEntry } from "./stubs/useModelProvider";
 
 export interface UseAIConfigReturn {
   apiKey: string;
@@ -22,15 +24,30 @@ export interface UseAIConfigReturn {
   setTopP: (value: number) => void;
   maxTokens: number;
   setMaxTokens: (value: number) => void;
-  availableModels: Array<{ id: string; name: string; provider: string; isLocal?: boolean }>;
+  availableModels: ModelEntry[];
   ollamaLoading: boolean;
+  ollamaUrl: string;
+  setOllamaUrl: (url: string) => void;
+  rescanModels: () => Promise<void>;
+  addModel: (model: Omit<ModelEntry, "id">) => void;
+  removeModel: (id: string) => void;
   showApiKey: boolean;
   setShowApiKey: (value: boolean) => void;
 }
 
 export function useAIConfig(): UseAIConfigReturn {
-  const { availableModels, ollamaLoading } = useModelProvider();
+  const {
+    availableModels,
+    ollamaLoading,
+    ollamaUrl,
+    setOllamaUrl,
+    rescan,
+    addModel,
+    removeModel,
+  } = useModelProvider();
+
   const { values: settingsValues, updateValue: updateSettingsValue } = useSettingsStore();
+  const [showApiKey, setShowApiKey] = useState(false);
 
   const apiKey = settingsValues.aiApiKey;
   const setApiKey = useCallback(
@@ -81,7 +98,12 @@ export function useAIConfig(): UseAIConfigReturn {
     setMaxTokens,
     availableModels,
     ollamaLoading,
-    showApiKey: false,
-    setShowApiKey: () => {},
+    ollamaUrl,
+    setOllamaUrl,
+    rescanModels: rescan,
+    addModel,
+    removeModel,
+    showApiKey,
+    setShowApiKey,
   };
 }

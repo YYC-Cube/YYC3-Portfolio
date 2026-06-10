@@ -12,12 +12,12 @@
  * - 可拖拽设计：支持鼠标和触摸拖拽
  */
 
-import { useState, useCallback } from "react";
-import { MessageSquare, Command, BookOpen, Sliders, GripVertical } from "lucide-react";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { FloatingButton, PanelHeader, ChatPanel, CommandsPanel, PromptsPanel, SettingsPanel } from "./components";
-import { useChat, useAIConfig, useFloatingPanel, useDraggable } from "./hooks";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { BookOpen, Command, GripVertical, MessageSquare, Sliders } from "lucide-react";
+import { useCallback, useState } from "react";
+import { ChatPanel, CommandsPanel, FloatingButton, PanelHeader, PromptsPanel, SettingsPanel } from "./components";
 import { SYSTEM_COMMANDS, type SystemCommand } from "./constants";
+import { useAIConfig, useChat, useDraggable, useFloatingPanel } from "./hooks";
 import type { AIAssistantProps, AITab } from "./types";
 
 const DRAGGABLE_BOUNDS = {
@@ -79,6 +79,11 @@ export function AIAssistant({ isMobile = false }: AIAssistantProps) {
     setMaxTokens,
     availableModels,
     ollamaLoading,
+    ollamaUrl,
+    setOllamaUrl,
+    rescanModels,
+    addModel,
+    removeModel,
   } = useAIConfig();
 
   const [showApiKey, setShowApiKey] = useState(false);
@@ -205,6 +210,11 @@ export function AIAssistant({ isMobile = false }: AIAssistantProps) {
                 selectedModel={selectedModel}
                 modelsLoading={ollamaLoading}
                 onModelSelect={setSelectedModel}
+                ollamaUrl={ollamaUrl}
+                onRescan={rescanModels}
+                onAddModel={addModel}
+                onRemoveModel={removeModel}
+                onOllamaUrlChange={setOllamaUrl}
                 temperature={temperature}
                 onTemperatureChange={setTemperature}
                 topP={topP}

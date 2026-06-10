@@ -47,7 +47,7 @@ export function useFloatingPanel(options: UseFloatingPanelOptions = {}): UseFloa
   const panelClass = isMaximized
     ? "fixed inset-4 md:inset-8 z-[60]"
     : isMobile
-      ? "fixed inset-0 z-[60]"
+      ? "fixed inset-0 z-[60] pb-[env(safe-area-inset-bottom,0px)] pt-[env(safe-area-inset-top,0px)]"
       : "fixed bottom-20 right-4 w-[480px] h-[640px] z-[60]";
 
   return {
