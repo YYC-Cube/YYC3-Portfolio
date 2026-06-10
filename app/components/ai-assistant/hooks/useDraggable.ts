@@ -7,7 +7,7 @@
  * @version v1.0.0
  */
 
-import { useState, useCallback, useRef, useEffect } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export interface Position {
   x: number;
@@ -39,23 +39,23 @@ export function useDraggable(options: UseDraggableOptions = {}): UseDraggableRet
 
   const [position, setPosition] = useState<Position>(initialPosition);
   const [isDragging, setIsDragging] = useState(false);
-  const draggableRef = useRef<HTMLDivElement | null>(null);
+  const draggableRef = useRef<HTMLDivElement>(null);
   const dragStartRef = useRef<{ x: number; y: number; posX: number; posY: number } | null>(null);
 
   const clampPosition = useCallback(
     (pos: Position): Position => {
-      if (!bounds) {return pos;}
+      if (!bounds) { return pos; }
 
       const element = draggableRef.current;
-      if (!element) {return pos;}
+      if (!element) { return pos; }
 
       const rect = element.getBoundingClientRect();
       let { x, y } = pos;
 
-      if (bounds.left !== undefined) {x = Math.max(bounds.left, x);}
-      if (bounds.top !== undefined) {y = Math.max(bounds.top, y);}
-      if (bounds.right !== undefined) {x = Math.min(bounds.right - rect.width, x);}
-      if (bounds.bottom !== undefined) {y = Math.min(bounds.bottom - rect.height, y);}
+      if (bounds.left !== undefined) { x = Math.max(bounds.left, x); }
+      if (bounds.top !== undefined) { y = Math.max(bounds.top, y); }
+      if (bounds.right !== undefined) { x = Math.min(bounds.right - rect.width, x); }
+      if (bounds.bottom !== undefined) { y = Math.min(bounds.bottom - rect.height, y); }
 
       return { x, y };
     },
@@ -64,7 +64,7 @@ export function useDraggable(options: UseDraggableOptions = {}): UseDraggableRet
 
   const handleMouseMove = useCallback(
     (e: MouseEvent) => {
-      if (!dragStartRef.current) {return;}
+      if (!dragStartRef.current) { return; }
 
       const deltaX = e.clientX - dragStartRef.current.x;
       const deltaY = e.clientY - dragStartRef.current.y;
@@ -82,7 +82,7 @@ export function useDraggable(options: UseDraggableOptions = {}): UseDraggableRet
 
   const handleTouchMove = useCallback(
     (e: TouchEvent) => {
-      if (!dragStartRef.current) {return;}
+      if (!dragStartRef.current) { return; }
 
       const touch = e.touches[0];
       const deltaX = touch.clientX - dragStartRef.current.x;

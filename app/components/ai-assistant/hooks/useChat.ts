@@ -7,9 +7,9 @@
  * @version v1.0.0
  */
 
-import { useState, useRef, useEffect, useCallback } from "react";
-import type { ChatMessage } from "../types";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { PROMPT_PRESETS } from "../constants";
+import type { ChatMessage } from "../types";
 
 function generateMockResponse(userMsg: string): string {
   const lower = userMsg.toLowerCase();
@@ -55,7 +55,7 @@ export interface UseChatReturn {
   inputValue: string;
   isTyping: boolean;
   systemPrompt: string;
-  chatEndRef: React.RefObject<HTMLDivElement | null>;
+  chatEndRef: React.RefObject<HTMLDivElement>;
   sendMessage: (content: string) => Promise<void>;
   setInputValue: (value: string) => void;
   clearChat: () => void;
@@ -74,7 +74,7 @@ export function useChat(options: UseChatOptions = {}): UseChatReturn {
   const [systemPrompt, setSystemPrompt] = useState(PROMPT_PRESETS[4].prompt);
   const [copiedId, setCopiedId] = useState<string | null>(null);
 
-  const chatEndRef = useRef<HTMLDivElement | null>(null);
+  const chatEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -82,7 +82,7 @@ export function useChat(options: UseChatOptions = {}): UseChatReturn {
 
   const sendMessage = useCallback(
     async (content: string) => {
-      if (!content.trim()) {return;}
+      if (!content.trim()) { return; }
 
       const userMsg: ChatMessage = {
         id: `msg-${Date.now()}`,
@@ -138,7 +138,7 @@ export function useChat(options: UseChatOptions = {}): UseChatReturn {
   }, []);
 
   const copyToClipboard = useCallback((text: string, id: string) => {
-    navigator.clipboard.writeText(text).catch(() => {});
+    navigator.clipboard.writeText(text).catch(() => { });
     setCopiedId(id);
     setTimeout(() => setCopiedId(null), 2000);
   }, []);

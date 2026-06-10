@@ -18,7 +18,7 @@ export interface ChatPanelProps {
   inputValue: string;
   isTyping: boolean;
   copiedId: string | null;
-  chatEndRef: RefObject<HTMLDivElement | null>;
+  chatEndRef: RefObject<HTMLDivElement>;
   onInputChange: (value: string) => void;
   onSend: () => void;
   onCopy: (text: string, id: string) => void;
