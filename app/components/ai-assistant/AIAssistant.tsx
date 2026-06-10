@@ -116,7 +116,7 @@ export function AIAssistant({ isMobile = false }: AIAssistantProps) {
 
   return (
     <div
-      ref={draggableRef as React.LegacyRef<HTMLDivElement>}
+      ref={draggableRef}
       className={isMaximized ? panelClass : "w-[380px] h-[520px]"}
       style={panelStyle}
     >

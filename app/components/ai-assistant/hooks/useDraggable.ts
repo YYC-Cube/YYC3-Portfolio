@@ -30,7 +30,7 @@ export interface UseDraggableReturn {
   isDragging: boolean;
   handleMouseDown: (e: React.MouseEvent) => void;
   handleTouchStart: (e: React.TouchEvent) => void;
-  draggableRef: React.RefObject<HTMLDivElement | null>;
+  draggableRef: React.RefObject<HTMLDivElement>;
   resetPosition: () => void;
 }
 
