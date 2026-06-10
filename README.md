@@ -27,7 +27,7 @@
 
 ## 📋 项目概览
 
-YYC³ Portfolio 是由 [YanYuCloudCube Team](mailto:admin@0379.email) 打造的创意作品集网站，融合极简设计与花艺美学，基于 **Next.js 16 + React 19 + shadcn/ui + Radix UI + Tailwind CSS** 技术栈构建，遵循 YYC³ 团队「五高五标五化五维」核心机制。
+YYC³ Portfolio 是由 [YanYuCloudCube Team](mailto:admin@0379.email) 打造的智能应用作品集网站，以「五高五标五化五维」为骨架，展示面向 AI 时代的智能应用开发范式。基于 **Next.js 16 + React 19 + shadcn/ui + Radix UI + Tailwind CSS** 技术栈构建，遵循 YYC³ 团队核心机制。
 
 | 属性 | 值 |
 |---|---|
@@ -58,6 +58,13 @@ yyc3-portfolio/
 │   │   ├── ContactForm.tsx     # 联系表单
 │   │   ├── NewsletterSubscribe.tsx # 订阅组件
 │   │   ├── WearYourStory.tsx   # 品牌故事
+│   │   ├── ai-assistant/       # AI 智能助手浮窗组件
+│   │   │   ├── AIAssistant.tsx # 主组件
+│   │   │   ├── components/     # 子组件（ChatPanel/CommandsPanel/PromptsPanel/SettingsPanel）
+│   │   │   ├── hooks/          # 自定义 Hooks（useChat/useDraggable/useFloatingPanel/useAIConfig）
+│   │   │   ├── constants/      # 命令与提示词配置
+│   │   │   ├── assets/         # Logo 组件
+│   │   │   └── types.ts        # 类型定义
 │   │   └── ...                 # 其他组件
 │   ├── globals.css             # 全局样式 + CSS 变量
 │   ├── layout.tsx              # 根布局
@@ -69,6 +76,8 @@ yyc3-portfolio/
 │   └── utils.ts                # 工具函数（cn 等）
 ├── public/
 │   ├── yyc3-dist/              # YYC³ 品牌资源（favicon、PWA icon）
+│   ├── yyc3-logo-blue/         # YYC³ Logo 多平台图标资源
+│   ├── Project-Screenshot/     # 项目截图（YYC3-00~12.png）
 │   ├── yyc3-Family.png         # 团队合影
 │   └── ...                     # 静态资源
 ├── docs/                       # 团队文化与规范文档
@@ -132,6 +141,7 @@ pnpm lint
 | 滚动公告 | `Marquee` | 文字无限滚动 |
 | 联系表单 | `ContactForm` | 用户联系表单 |
 | 订阅组件 | `NewsletterSubscribe` | 邮件订阅 |
+| AI 助手 | `AIAssistant` | 可拖拽浮窗 AI 智能助手（聊天/命令/提示词/设置） |
 
 ### 技术亮点
 
@@ -140,6 +150,7 @@ pnpm lint
 - **shadcn/ui** — 60+ 高质量 UI 组件，基于 Radix UI 原语
 - **暗色模式** — 基于 `next-themes` 的系统级主题切换
 - **PWA 就绪** — 完整的 Web App Manifest + 多尺寸图标
+- **AI 智能助手** — 可拖拽浮窗组件，集成聊天/命令/提示词/配置面板
 - **响应式设计** — 全端适配，移动优先
 
 ---
@@ -177,7 +188,7 @@ pnpm lint
 | **高性能** | Turbopack 打包、图片优化、代码分割 |
 | **高安全** | 无密钥泄露、CSP 就绪、输入校验 |
 | **高扩展** | 模块化组件、可插拔架构、shadcn/ui 生态 |
-| **高智能** | 智能主题切换、响应式布局、动画编排 |
+| **高智能** | AI 智能助手浮窗、智能主题切换、响应式布局、动画编排 |
 
 ### 五标体系
 
@@ -255,6 +266,7 @@ pnpm dlx shadcn@latest add [component-name]
 |---|---|---|
 | 自动构建 | ✅ | Next.js 静态导出 (`output: 'export'`) |
 | 自动部署 | ✅ | 推送至 `main` 分支触发部署 |
+| Lint 检查 | ✅ | ESLint 代码质量检查（lint → build → deploy） |
 | 自定义域名 | ✅ | `protf.yyc3.top`（已通过 DNS 认证） |
 | pnpm 支持 | ✅ | 使用 pnpm 包管理器优化安装速度 |
 | 缓存优化 | ✅ | Node.js + pnpm 缓存加速构建 |
@@ -271,7 +283,7 @@ on:
 #### 📦 构建流程
 
 ```
-Checkout → Setup pnpm → Setup Node.js 20 → Install → Build (next build) → Upload Artifact → Deploy
+Checkout → Setup pnpm → Setup Node.js 20 → Install → Lint → Build (next build) → Upload Artifact → Deploy
 ```
 
 #### 🌐 访问地址
@@ -319,6 +331,8 @@ npx serve out -p 4173
 | Favicon | `/yyc3-dist/favicon.ico` | 浏览器标签图标 |
 | PWA Icons | `/yyc3-dist/yanyu_cloud_*.png` | 多尺寸应用图标（16~512px） |
 | PWA Manifest | `/yyc3-dist/manifest.json` | PWA 配置 |
+| Logo 资源 | `/yyc3-logo-blue/` | 多平台品牌图标（Android/iOS/Web） |
+| 项目截图 | `/Project-Screenshot/YYC3-*.png` | 作品集展示图片（00~12） |
 | 团队合影 | `/yyc3-Family.png` | 文档顶图 / Hero 展示 |
 
 ---
