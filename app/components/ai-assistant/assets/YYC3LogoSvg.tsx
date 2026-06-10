@@ -19,9 +19,10 @@ interface YYC3LogoSvgProps {
 export function YYC3LogoSvg({
   size = 40,
   className = "",
-  showText: _showText = true,
+  showText = true,
   style,
 }: YYC3LogoSvgProps) {
+  void showText; // 参数保留供外部使用，当前版本不需要显示文字
   return (
     <img
       src={logoSrc}

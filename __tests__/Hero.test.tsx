@@ -5,9 +5,12 @@ import Hero from "@/app/components/Hero"
 // mock framer-motion
 vi.mock("framer-motion", () => ({
   motion: {
-    h1: ({ children, ...props }: any) => <h1 {...props}>{children}</h1>,
-    p: ({ children, ...props }: any) => <p {...props}>{children}</p>,
-    div: ({ children, ...props }: any) => <div {...props}>{children}</div>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    h1: ({ children, ...props }: Record<string, any>) => <h1 {...props}>{children}</h1>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    p: ({ children, ...props }: Record<string, any>) => <p {...props}>{children}</p>,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    div: ({ children, ...props }: Record<string, any>) => <div {...props}>{children}</div>,
   },
 }))
 

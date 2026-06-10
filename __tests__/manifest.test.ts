@@ -21,7 +21,8 @@ describe("PWA Manifest", () => {
 
   it("includes 512x512 icon with maskable purpose", () => {
     const icon512 = manifest.icons.find(
-      (i: any) => i.sizes === "512x512"
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (i: Record<string, any>) => i.sizes === "512x512"
     )
     expect(icon512).toBeDefined()
     expect(icon512.purpose).toContain("maskable")
