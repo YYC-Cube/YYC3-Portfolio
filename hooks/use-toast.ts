@@ -27,22 +27,22 @@ type ActionType = typeof actionTypes
 
 type Action =
   | {
-      type: ActionType['ADD_TOAST']
-      toast: ToasterToast
-    }
+    type: ActionType['ADD_TOAST']
+    toast: ToasterToast
+  }
   | {
-      type: ActionType['UPDATE_TOAST']
-      partial: Partial<ToasterToast>
-      toast: ToasterToast
-    }
+    type: ActionType['UPDATE_TOAST']
+    partial: Partial<ToasterToast>
+    toast: ToasterToast
+  }
   | {
-      type: ActionType['DISMISS_TOAST']
-      toastId?: ToasterToast['id']
-    }
+    type: ActionType['DISMISS_TOAST']
+    toastId?: ToasterToast['id']
+  }
   | {
-      type: ActionType['REMOVE_TOAST']
-      toastId?: ToasterToast['id']
-    }
+    type: ActionType['REMOVE_TOAST']
+    toastId?: ToasterToast['id']
+  }
 
 interface State {
   toasts: ToasterToast[]
@@ -107,9 +107,9 @@ export const reducer = (state: State, action: Action): State => {
         toasts: state.toasts.map((t) =>
           t.id === toastId || toastId === undefined
             ? {
-                ...t,
-                open: false,
-              }
+              ...t,
+              open: false,
+            }
             : t,
         ),
       }
@@ -148,7 +148,7 @@ function toast({ ...props }: Toast) {
     dispatch({
       type: 'UPDATE_TOAST',
       partial: props,
-      toast: { id, ...props },
+      toast: { ...props, id: id },
     })
   const dismiss = () => dispatch({ type: 'DISMISS_TOAST', toastId: id })
 
@@ -156,7 +156,7 @@ function toast({ ...props }: Toast) {
     type: 'ADD_TOAST',
     toast: {
       ...props,
-      id,
+      id: id,
       open: true,
       onOpenChange: (open: boolean) => {
         if (!open) dismiss()
@@ -191,4 +191,4 @@ function useToast() {
   }
 }
 
-export { useToast, toast }
+export { toast, useToast }
