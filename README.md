@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/yyc3-Family.png" alt="YYC³ Family" width="200" />
+<img src="public/yyc3-Family.png" alt="YYC³ Family" />
 
 # YYC³ Portfolio
 
