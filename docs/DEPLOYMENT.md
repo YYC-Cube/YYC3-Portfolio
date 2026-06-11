@@ -44,7 +44,7 @@
 | **包管理** | pnpm | latest | 高效依赖管理 |
 | **CI/CD** | GitHub Actions | - | 自动化部署 |
 | **托管** | GitHub Pages | - | 静态站点托管 |
-| **域名** | protf.yyc3.top | - | 自定义域名 |
+| **域名** | design.yyc3.top | - | 自定义域名 |
 
 ---
 
@@ -160,7 +160,7 @@ git push origin main
 
 | 项目 | 值 |
 |------|-----|
-| **域名** | `protf.yyc3.top` |
+| **域名** | `design.yyc3.top` |
 | **类型** | CNAME 记录（子域名） |
 | **托管服务** | GitHub Pages |
 | **DNS 状态** | ✅ 已验证通过 |
@@ -171,7 +171,7 @@ git push origin main
 
 ```
 Type:    CNAME
-Name:    protf
+Name:    design
 Value:   <username>.github.io
 TTL:     3600 (1小时)
 ```
@@ -183,7 +183,7 @@ TTL:     3600 (1小时)
 ### GitHub Pages 设置
 
 1. 进入仓库 **Settings** → **Pages**
-2. 在 **Custom domain** 中输入：`protf.yyc3.top`
+2. 在 **Custom domain** 中输入：`design.yyc3.top`
 3. 确保 **Enforce HTTPS** 已勾选
 4. GitHub 会自动添加 `CNAME` 文件到 `/out` 目录
 
@@ -191,13 +191,13 @@ TTL:     3600 (1小时)
 
 ```bash
 # 检查 DNS 解析
-dig protf.yyc3.top +short
+dig design.yyc3.top +short
 
 # 检查 HTTPS 证书
-curl -I https://protf.yyc3.top
+curl -I https://design.yyc3.top
 
 # 检查重定向
-curl -I http://protf.yyc3.top
+curl -I http://design.yyc3.top
 ```
 
 ---
@@ -344,16 +344,16 @@ npx tsc --noEmit
 
 ```bash
 # 1. 检查 DNS 解析
-nslookup protf.yyc3.top
+nslookup design.yyc3.top
 
 # 2. 检查 GitHub Pages 设置
 # Settings → Pages → Custom domain
 
 # 3. 检查 CNAME 文件
-cat out/CNAME  # 应包含: protf.yyc3.top
+cat out/CNAME  # 应包含: design.yyc3.top
 
 # 4. 检查 HTTPS 证书
-openssl s_client -connect protf.yyc3.top:443 -servername protf.yyc3.top
+openssl s_client -connect design.yyc3.top:443 -servername design.yyc3.top
 ```
 
 #### ❌ 问题 5：图片资源加载失败

@@ -12,7 +12,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - GitHub Actions CI/CD workflow for automated deployment to GitHub Pages
 - Next.js static export configuration (`output: 'export'`) for GitHub Pages compatibility
 - Comprehensive deployment guide in README.md with CI/CD documentation
-- Custom domain support for `protf.yyc3.top` with DNS verification
+- Custom domain support for `design.yyc3.top` with DNS verification
 - pnpm caching optimization in GitHub Actions for faster builds
 - Manual deployment fallback instructions using gh CLI
 

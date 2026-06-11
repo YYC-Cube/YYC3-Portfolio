@@ -17,11 +17,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](./LICENSE)
 
 [![Build Status](https://img.shields.io/github/actions/workflow/status/YYC-Cube/YYC3-Portfolio/deploy.yml?style=flat-square&label=CI%2FCD&logo=github)](https://github.com/YYC-Cube/YYC3-Portfolio/actions)
-[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deployed-222222?style=flat-square&logo=githubpages&logoColor=white)](https://protf.yyc3.top)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Deployed-222222?style=flat-square&logo=githubpages&logoColor=white)](https://design.yyc3.top)
 [![Tests](https://img.shields.io/badge/Tests-51_passed-22c55e?style=flat-square&logo=vitest&logoColor=white)](https://vitest.dev/)
 [![PWA](https://img.shields.io/badge/PWA-Ready-5A0FC8?style=flat-square&logo=pwa&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps)
 [![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square)](./CONTRIBUTING.md)
-[![Custom Domain](https://img.shields.io/badge/Domain-protf.yyc3.top-2563eb?style=flat-square&logo=cloudflare&logoColor=white)](https://protf.yyc3.top)
+[![Custom Domain](https://img.shields.io/badge/Domain-design.yyc3.top-2563eb?style=flat-square&logo=cloudflare&logoColor=white)](https://design.yyc3.top)
 
 [![五高架构](https://img.shields.io/badge/五高-高可用%20%7C%20高性能%20%7C%20高安全%20%7C%20高扩展%20%7C%20高智能-blue?style=for-the-badge)](./docs/YYC3-团队核心-五维驱动.md)
 [![五标体系](https://img.shields.io/badge/五标-标准化%20%7C%20规范化%20%7C%20自动化%20%7C%20可视化%20%7C%20智能化-teal?style=for-the-badge)](./docs/YYC3-团队规范-开发标准.md)
@@ -44,7 +44,7 @@ YYC³ Portfolio 是由 [YanYuCloudCube Team](mailto:admin@0379.email) 打造的�
 | **PWA** | Service Worker + Manifest + 离线缓存 |
 | **AI 助手** | Ollama 本地模型扫描 + 多 Provider 支持 |
 | **部署** | GitHub Actions → GitHub Pages (自动 CI/CD) |
-| **自定义域名** | [protf.yyc3.top](https://protf.yyc3.top) |
+| **自定义域名** | [design.yyc3.top](https://design.yyc3.top) |
 | **开发端口** | 3117 |
 | **团队** | YanYuCloudCube Team |
 | **许可证** | MIT |
@@ -380,7 +380,7 @@ graph LR
 | 自动构建 | ✅ | Next.js 静态导出 (`output: 'export'`) |
 | 自动部署 | ✅ | 推送至 `main` 分支 → GitHub Pages |
 | Lint 检查 | ✅ | lint → build → deploy 三级流水线 |
-| 自定义域名 | ✅ | `protf.yyc3.top`（Cloudflare DNS） |
+| 自定义域名 | ✅ | `design.yyc3.top`（Cloudflare DNS） |
 | pnpm workspaces | ✅ | 工作区模式，缓存优化 |
 | 缓存加速 | ✅ | Node.js + pnpm 缓存 |
 
@@ -388,7 +388,7 @@ graph LR
 
 | 地址 | 用途 |
 |---|---|
-| [protf.yyc3.top](https://protf.yyc3.top) | 🏆 自定义域名（主用） |
+| [design.yyc3.top](https://design.yyc3.top) | 🏆 自定义域名（主用） |
 | `https://yyc-cube.github.io/YYC3-Portfolio` | GitHub Pages（备用） |
 
 ### 手动部署（备选）
