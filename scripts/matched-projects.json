@@ -1,0 +1,335 @@
+[
+  {
+    "id": 1,
+    "title": "YYC³ 言语Cloud",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-01.png",
+    "category": "分类",
+    "demoUrl": "https://design-ui.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-UI-Design-System"
+  },
+  {
+    "id": 2,
+    "title": "言语云量化分析交易系统",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-02.png",
+    "category": "分类",
+    "demoUrl": "https://trading.yyc3.vip/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Financial-Quantitative-Trading-System"
+  },
+  {
+    "id": 3,
+    "title": "YYC³ AI Code",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-03.png",
+    "category": "分类",
+    "demoUrl": "https://ai-family.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-AI-Family-Multi-Agent-Platform-"
+  },
+  {
+    "id": 4,
+    "title": "YYC³ Portal",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-04.png",
+    "category": "分类",
+    "demoUrl": "https://portal.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Nexus-Portal"
+  },
+  {
+    "id": 5,
+    "title": "智慧社区服务平台",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-05.png",
+    "category": "分类",
+    "demoUrl": "https://smart-city.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Smart-City-Platform"
+  },
+  {
+    "id": 6,
+    "title": "YYC³ Learning",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-06.png",
+    "category": "分类",
+    "demoUrl": "https://learning.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3_Learning-Platform"
+  },
+  {
+    "id": 7,
+    "title": "YYC³ AI 智能开发环境",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-07.png",
+    "category": "分类",
+    "demoUrl": "https://ai-pai.yyc3.vip/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-AI-PAI"
+  },
+  {
+    "id": 8,
+    "title": "Family AI",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-08.png",
+    "category": "分类",
+    "demoUrl": "https://family-ai.yyc3.vip/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-AI-Family-Multi-Agent-Platform-"
+  },
+  {
+    "id": 9,
+    "title": "YYC³ AI Family Docs",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-09.png",
+    "category": "分类",
+    "demoUrl": "https://docs.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-AI-Family-Multi-Agent-Platform-"
+  },
+  {
+    "id": 10,
+    "title": "FAmily AI Code",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-10.png",
+    "category": "分类",
+    "demoUrl": "https://code.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-AI-Code-FAmily"
+  },
+  {
+    "id": 11,
+    "title": "YYC³ Cloud Intelli-Matrix",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-11.png",
+    "category": "分类",
+    "demoUrl": "https://matrix.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Cloud-Intelli-Matrix"
+  },
+  {
+    "id": 12,
+    "title": "YYC³ 言语Cloud 设计",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-12.png",
+    "category": "分类",
+    "demoUrl": "https://design.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-UI-Design-System"
+  },
+  {
+    "id": 13,
+    "title": "YYC³ AI Intelligent Calling",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-13.png",
+    "category": "分类",
+    "demoUrl": "https://ai-call.yyc3.vip/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-AI-Call"
+  },
+  {
+    "id": 14,
+    "title": "YYC³ Brain",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-14.png",
+    "category": "分类",
+    "demoUrl": "https://brain.yyc3.vip/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Brain-Compute-System"
+  },
+  {
+    "id": 15,
+    "title": "YYC³ 简易表格转换器",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-15.png",
+    "category": "分类",
+    "demoUrl": "https://table.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Easy-Table-Converter"
+  },
+  {
+    "id": 16,
+    "title": "YYC³-Med",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-16.png",
+    "category": "分类",
+    "demoUrl": "https://medical.yyc3.vip/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Medical"
+  },
+  {
+    "id": 17,
+    "title": "YYC³ AI-Family 聊天机器人",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-17.png",
+    "category": "分类",
+    "demoUrl": "https://family-ai.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-AI-Family-Multi-Agent-Platform-"
+  },
+  {
+    "id": 18,
+    "title": "YYC³ Pivot",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-18.png",
+    "category": "分类",
+    "demoUrl": "https://pivot.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-CloudPivot-Intelli-Matrix"
+  },
+  {
+    "id": 19,
+    "title": "YYC³ Learning Platform",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-19.png",
+    "category": "分类",
+    "demoUrl": "https://learning-ai.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Learning-Platform"
+  },
+  {
+    "id": 20,
+    "title": "YYC3 智慧商家管理系统",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-20.png",
+    "category": "分类",
+    "demoUrl": "https://futuristic.yyc3.top/login/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Futuristic-Dashboard"
+  },
+  {
+    "id": 21,
+    "title": "言语云集成中心",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-21.png",
+    "category": "分类",
+    "demoUrl": "https://nexus.yyc3.vip/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Nexus-Portal"
+  },
+  {
+    "id": 22,
+    "title": "YYC³ AI Family",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-22.png",
+    "category": "分类",
+    "demoUrl": "https://ai-assis.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Bot"
+  },
+  {
+    "id": 23,
+    "title": "YYC3 Gallery",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-23.png",
+    "category": "分类",
+    "demoUrl": "https://gallery.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Infinite-Gallery"
+  },
+  {
+    "id": 24,
+    "title": "F-KTV POS 系统",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-24.png",
+    "category": "分类",
+    "demoUrl": "https://club.yyc3.top/rooms",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Club-Ops"
+  },
+  {
+    "id": 25,
+    "title": "YYC³-QZ-Merchant-Management-System",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-25.png",
+    "category": "分类",
+    "demoUrl": "https://clube.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Clube-Management-System"
+  },
+  {
+    "id": 26,
+    "title": "YYC³ Nexus",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-26.png",
+    "category": "分类",
+    "demoUrl": "https://nexus.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Nexus"
+  },
+  {
+    "id": 27,
+    "title": "YYC³ NexusAI",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-27.png",
+    "category": "分类",
+    "demoUrl": "https://nexus-ai.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Nexus-AI"
+  },
+  {
+    "id": 28,
+    "title": "YYC³ 万象归元",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-28.png",
+    "category": "分类",
+    "demoUrl": "https://saas.yyc3.vip/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Saas-Landing"
+  },
+  {
+    "id": 29,
+    "title": "MusAI 缪斯智音",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-29.png",
+    "category": "分类",
+    "demoUrl": "https://d-music.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-D-MusAI"
+  },
+  {
+    "id": 30,
+    "title": "YYC³ Business Management",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-30.png",
+    "category": "分类",
+    "demoUrl": "https://management.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Business-Management-System"
+  },
+  {
+    "id": 31,
+    "title": "YYC³ Portfolio",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-31.png",
+    "category": "分类",
+    "demoUrl": "https://protf.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Portfolio"
+  },
+  {
+    "id": 32,
+    "title": "YYC³ AuraFlow",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-32.png",
+    "category": "分类",
+    "demoUrl": "https://aureflow.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Auraflow"
+  },
+  {
+    "id": 33,
+    "title": "YYC³ Portable Intelligent AI",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-33.png",
+    "category": "分类",
+    "demoUrl": "https://ai.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-AI-App-Intelligence-Platform"
+  },
+  {
+    "id": 34,
+    "title": "YYC³ Administration",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-34.png",
+    "category": "分类",
+    "demoUrl": "https://admin.yyc3.vip/",
+    "liveUrl": "https://github.com/YYC-Cube/YC3-Administration"
+  },
+  {
+    "id": 35,
+    "title": "YYC3 AI Family",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-35.png",
+    "category": "分类",
+    "demoUrl": "https://pro.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-AI-Family-Multi-Agent-Platform-"
+  },
+  {
+    "id": 36,
+    "title": "YYC³ Customer Care Center",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-36.png",
+    "category": "分类",
+    "demoUrl": "https://ccc.yyc3.top/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Customer-Care-Center"
+  },
+  {
+    "id": 37,
+    "title": "YYC³ Pulse",
+    "description": "项目描述",
+    "imageUrl": "/Project-Screenshot/YYC3-37.png",
+    "category": "分类",
+    "demoUrl": "https://pulse.yyc3.top/zh-CN/",
+    "liveUrl": "https://github.com/YYC-Cube/YYC3-Pulse"
+  }
+]

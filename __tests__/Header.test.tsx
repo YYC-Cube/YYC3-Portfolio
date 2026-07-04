@@ -1,5 +1,7 @@
 import Header from "@/app/components/Header"
+import { I18nProvider } from "@/lib/i18n"
 import { fireEvent, render, screen } from "@testing-library/react"
+import React from "react"
 import { beforeEach, describe, expect, it, vi } from "vitest"
 
 // mock next-themes
@@ -18,27 +20,31 @@ vi.mock("framer-motion", () => ({
   AnimatePresence: ({ children }: { children: React.ReactNode }) => <>{children}</>,
 }))
 
+function renderWithI18n(ui: React.ReactElement) {
+  return render(<I18nProvider>{ui}</I18nProvider>)
+}
+
 describe("Header", () => {
   beforeEach(() => {
     vi.clearAllMocks()
   })
 
   it("renders logo and navigation links", () => {
-    render(<Header />)
-    expect(screen.getByAltText("YanYuCloudCube 标志")).toBeInTheDocument()
+    renderWithI18n(<Header />)
+    expect(screen.getByAltText("YanYuCloudCube")).toBeInTheDocument()
     expect(screen.getByText("作品展示")).toBeInTheDocument()
     expect(screen.getByText("关于我们")).toBeInTheDocument()
     expect(screen.getByText("联系方式")).toBeInTheDocument()
   })
 
   it("shows hamburger menu button on mobile (always rendered)", () => {
-    render(<Header />)
+    renderWithI18n(<Header />)
     const menuButton = screen.getByLabelText("打开菜单")
     expect(menuButton).toBeInTheDocument()
   })
 
   it("opens mobile menu on hamburger click", async () => {
-    render(<Header />)
+    renderWithI18n(<Header />)
     const menuButton = screen.getByLabelText("打开菜单")
     fireEvent.click(menuButton)
     // After clicking, mobile menu links should be visible
@@ -47,7 +53,7 @@ describe("Header", () => {
   })
 
   it("closes mobile menu when link is clicked", async () => {
-    render(<Header />)
+    renderWithI18n(<Header />)
     const menuButton = screen.getByLabelText("打开菜单")
     fireEvent.click(menuButton)
     const firstLink = screen.getAllByText("作品展示")[0]

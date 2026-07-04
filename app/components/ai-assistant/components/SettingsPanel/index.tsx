@@ -4,12 +4,13 @@
  * @file components/SettingsPanel/index.tsx
  * @description 设置面板容器组件
  * @author YanYuCloudCube Team
- * @version v1.0.0
+ * @version v3.0.0 - 增强 Ollama 状态检测和诊断修复
  */
 
 import { ApiKeyInput, type ApiKeyInputProps } from "./ApiKeyInput";
 import { ModelSelector, type ModelSelectorProps } from "./ModelSelector";
 import { ParameterSlider } from "./ParameterSlider";
+import { AnimationTestPanel } from "./AnimationTestPanel";
 
 export interface SettingsPanelProps {
   apiKey: ApiKeyInputProps["value"];
@@ -19,12 +20,15 @@ export interface SettingsPanelProps {
   models: ModelSelectorProps["models"];
   selectedModel: ModelSelectorProps["selectedId"];
   modelsLoading: ModelSelectorProps["loading"];
+  ollamaStatus: ModelSelectorProps["ollamaStatus"];
+  scanProgress: ModelSelectorProps["scanProgress"];
   onModelSelect: ModelSelectorProps["onSelect"];
   ollamaUrl: ModelSelectorProps["ollamaUrl"];
   onRescan: ModelSelectorProps["onRescan"];
   onAddModel: ModelSelectorProps["onAddModel"];
   onRemoveModel: ModelSelectorProps["onRemoveModel"];
   onOllamaUrlChange: ModelSelectorProps["onOllamaUrlChange"];
+  onDiagnoseAndRepair: ModelSelectorProps["onDiagnoseAndRepair"];
   temperature: number;
   onTemperatureChange: (value: number) => void;
   topP: number;
@@ -41,12 +45,15 @@ export function SettingsPanel({
   models,
   selectedModel,
   modelsLoading,
+  ollamaStatus,
+  scanProgress,
   onModelSelect,
   ollamaUrl,
   onRescan,
   onAddModel,
   onRemoveModel,
   onOllamaUrlChange,
+  onDiagnoseAndRepair,
   temperature,
   onTemperatureChange,
   topP,
@@ -66,12 +73,15 @@ export function SettingsPanel({
         models={models}
         selectedId={selectedModel}
         loading={modelsLoading}
+        ollamaStatus={ollamaStatus}
+        scanProgress={scanProgress}
         onSelect={onModelSelect}
         ollamaUrl={ollamaUrl}
         onRescan={onRescan}
         onAddModel={onAddModel}
         onRemoveModel={onRemoveModel}
         onOllamaUrlChange={onOllamaUrlChange}
+        onDiagnoseAndRepair={onDiagnoseAndRepair}
       />
       <ParameterSlider
         label="温度 (Temperature)"
@@ -106,6 +116,11 @@ export function SettingsPanel({
         onChange={onMaxTokensChange}
         color="#00ff88"
       />
+
+      {/* 动效测试与诊断 */}
+      <div className="pt-4 border-t border-[rgba(0,180,255,0.1)]">
+        <AnimationTestPanel />
+      </div>
     </div>
   );
 }

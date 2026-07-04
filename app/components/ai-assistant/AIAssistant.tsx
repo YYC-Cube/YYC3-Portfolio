@@ -79,11 +79,14 @@ export function AIAssistant({ isMobile = false }: AIAssistantProps) {
     setMaxTokens,
     availableModels,
     ollamaLoading,
+    ollamaStatus,
+    scanProgress,
     ollamaUrl,
     setOllamaUrl,
     rescanModels,
     addModel,
     removeModel,
+    diagnoseAndRepair,
   } = useAIConfig();
 
   const [showApiKey, setShowApiKey] = useState(false);
@@ -209,12 +212,15 @@ export function AIAssistant({ isMobile = false }: AIAssistantProps) {
                 models={availableModels}
                 selectedModel={selectedModel}
                 modelsLoading={ollamaLoading}
+                ollamaStatus={ollamaStatus}
+                scanProgress={scanProgress}
                 onModelSelect={setSelectedModel}
                 ollamaUrl={ollamaUrl}
                 onRescan={rescanModels}
                 onAddModel={addModel}
                 onRemoveModel={removeModel}
                 onOllamaUrlChange={setOllamaUrl}
+                onDiagnoseAndRepair={diagnoseAndRepair}
                 temperature={temperature}
                 onTemperatureChange={setTemperature}
                 topP={topP}

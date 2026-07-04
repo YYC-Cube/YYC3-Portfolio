@@ -1,8 +1,8 @@
-import { describe, it, expect, vi, beforeEach } from "vitest"
-import { render, screen, fireEvent, waitFor } from "@testing-library/react"
-import userEvent from "@testing-library/user-event"
 import { ModelSelector, type ModelSelectorProps } from "@/app/components/ai-assistant/components/SettingsPanel/ModelSelector"
 import type { ModelEntry } from "@/app/components/ai-assistant/hooks/useAIConfig"
+import { fireEvent, render, screen, waitFor } from "@testing-library/react"
+import userEvent from "@testing-library/user-event"
+import { beforeEach, describe, expect, it, vi } from "vitest"
 
 // ---------- test data ----------
 
@@ -16,12 +16,15 @@ const defaultProps: ModelSelectorProps = {
   models: mockModels,
   selectedId: "llama3.2",
   loading: false,
+  ollamaStatus: { isRunning: true, version: "0.5.0", error: undefined, modelCount: 2 },
+  scanProgress: { stage: "idle", percent: 0 },
   ollamaUrl: "http://localhost:11434",
   onSelect: vi.fn(),
   onRescan: vi.fn().mockResolvedValue(undefined),
   onAddModel: vi.fn(),
   onRemoveModel: vi.fn(),
   onOllamaUrlChange: vi.fn(),
+  onDiagnoseAndRepair: vi.fn().mockResolvedValue(undefined),
 }
 
 // ---------- tests ----------

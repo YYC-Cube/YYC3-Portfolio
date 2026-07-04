@@ -1,3 +1,4 @@
+import { I18nProvider } from "@/lib/i18n/provider"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Inter } from "next/font/google"
 import type React from "react"
@@ -13,7 +14,6 @@ export const metadata = {
   title: "YanYuCloudCube — 五高五标五化五维智能应用开发范式",
   description: "以「五高五标五化五维」为骨架，构建面向AI时代的智能应用开发范式。融合现代软件工程最佳实践与人工智能前沿技术。",
   generator: "v0.app",
-  manifest: "/manifest.json",
   icons: {
     icon: [
       { url: "/yyc3-logo-blue/windows/windows/icon-32.png", sizes: "32x32", type: "image/png" },
@@ -58,13 +58,15 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <body className={`${inter.className} min-h-screen bg-background text-foreground`}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-          <Toaster richColors position="top-right" />
-          <PWARegister />
-        </ThemeProvider>
+        <I18nProvider>
+          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+            <Header />
+            <main>{children}</main>
+            <Footer />
+            <Toaster richColors position="top-right" />
+            <PWARegister />
+          </ThemeProvider>
+        </I18nProvider>
       </body>
     </html>
   )
