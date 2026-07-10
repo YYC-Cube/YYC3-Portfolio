@@ -25,4 +25,17 @@ export default tseslint.config(
       ],
     },
   },
+  // shadcn/ui 组件、Next.js layout 和 i18n Provider 遵循框架标准模式，
+  // 允许在同一文件中导出组件和非组件值
+  {
+    files: [
+      'app/layout.tsx',
+      'components/ui/**/*.{ts,tsx}',
+      'components/Pagination.tsx',
+      'lib/i18n/provider.tsx',
+    ],
+    rules: {
+      'react-refresh/only-export-components': 'off',
+    },
+  },
 )

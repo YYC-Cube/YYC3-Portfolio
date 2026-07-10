@@ -1,20 +1,20 @@
 "use client"
 
-import React, { createContext, useContext, useEffect, useState, useCallback, useMemo } from "react"
+import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from "react"
 import { I18nEngine, type Locale } from "./engine"
-import type { TranslationMap, I18nEngineConfig, EngineStats } from "./types"
-import zhCN from "./locales/zh-CN"
+import ar from "./locales/ar"
+import de from "./locales/de"
 import en from "./locales/en"
-import zhTW from "./locales/zh-TW"
+import es from "./locales/es"
+import fr from "./locales/fr"
 import ja from "./locales/ja"
 import ko from "./locales/ko"
-import fr from "./locales/fr"
-import de from "./locales/de"
-import es from "./locales/es"
 import ptBR from "./locales/pt-BR"
-import ar from "./locales/ar"
+import zhCN from "./locales/zh-CN"
+import zhTW from "./locales/zh-TW"
+import type { EngineStats, I18nEngineConfig, TranslationMap } from "./types"
 
-export { type Locale, type TranslationMap, type I18nEngineConfig }
+export { type I18nEngineConfig, type Locale, type TranslationMap }
 
 /** 所有内置语言翻译映射 */
 const BUILTIN_LOCALES: Record<string, TranslationMap> = {
@@ -114,7 +114,7 @@ export function I18nProvider({
         setLocaleState(stored)
       }
     }
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   // 语言切换时更新 engine
