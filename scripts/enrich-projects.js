@@ -163,4 +163,4 @@ fs.writeFileSync(
   '/Volumes/Max/YYC3-Portfolio/scripts/review-report.md',
   report
 );
-console.log('✅ 审查报告已保存到 scripts/review-report.md`);
+console.log(`✅ 审查报告已保存到 scripts/review-report.md`);

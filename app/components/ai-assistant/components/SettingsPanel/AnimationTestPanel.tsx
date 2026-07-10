@@ -8,7 +8,7 @@
  */
 
 import { Activity, AlertTriangle, CheckCircle, XCircle, Wrench, Play, Trash2, RefreshCw } from "lucide-react"
-import { useCallback, useState } from "react"
+import { useState } from "react"
 import { useAnimationTest } from "../../hooks/useAnimationTest"
 
 export function AnimationTestPanel() {

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
-import Image from "next/image"
 import { GitHubRepo, getGitHubRepos, filterShowcaseRepos, categorizeRepos } from "@/lib/github"
 
 /**

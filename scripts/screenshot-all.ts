@@ -4,9 +4,9 @@
  * 使用 Puppeteer 访问每个项目的 demoUrl 并截图
  */
 
-import puppeteer, { type Page } from "puppeteer";
 import fs from "fs";
 import path from "path";
+import puppeteer, { type Page } from "puppeteer";
 
 // 项目数据（从 PortfolioGrid.tsx 提取）
 const projects = [
@@ -97,9 +97,10 @@ async function screenshotProject(page: Page, project: typeof projects[0]) {
 
     console.log(`   ✅ 已保存: ${fileName}`);
     return { success: true, project, fileName };
-  } catch (error: any) {
-    console.error(`   ❌ 失败: ${error.message}`);
-    return { success: false, project, error: error.message };
+  } catch (error: unknown) {
+    const err = error instanceof Error ? error : new Error(String(error))
+    console.error(`   ❌ 失败: ${err.message}`);
+    return { success: false, project, error: err.message };
   }
 }
 

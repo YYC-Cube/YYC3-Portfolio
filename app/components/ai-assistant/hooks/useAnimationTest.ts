@@ -253,7 +253,7 @@ export function useAnimationTest(): UseAnimationTestReturn {
 
     await new Promise(resolve => setTimeout(resolve, 500))
 
-    const memory = (performance as any).memory
+    const memory = (performance as Performance & { memory?: { usedJSHeapSize: number; totalJSHeapSize: number; jsHeapSizeLimit: number } }).memory
     const usedJSHeapSize = memory ? memory.usedJSHeapSize / 1024 / 1024 : 0 // MB
     const totalJSHeapSize = memory ? memory.totalJSHeapSize / 1024 / 1024 : 0 // MB
 

@@ -47,7 +47,7 @@ function createTestEngine(locale: Locale = "zh-CN") {
 
 describe("@yyc3/i18n-core — 10-Language Verification", () => {
   it("all 10 locale files are importable", () => {
-    for (const [locale, map] of Object.entries(ALL_LOCALES)) {
+    for (const [, map] of Object.entries(ALL_LOCALES)) {
       expect(map).toBeDefined()
       expect(typeof map).toBe("object")
       expect((map as Record<string, unknown>).common).toBeDefined()

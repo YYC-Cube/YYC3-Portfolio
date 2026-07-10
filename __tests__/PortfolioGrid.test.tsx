@@ -18,7 +18,7 @@ vi.mock("next/image", () => ({
 
 // mock Pagination component to simplify testing
 vi.mock("@/components/Pagination", () => ({
-  Pagination: ({ currentPage, totalPages, onPageChange }: any) => {
+  Pagination: ({ currentPage, totalPages, onPageChange }: { currentPage: number; totalPages: number; onPageChange: (page: number) => void }) => {
     if (totalPages <= 1) return null
     return (
       <div data-testid="pagination">
@@ -32,7 +32,7 @@ vi.mock("@/components/Pagination", () => ({
       </div>
     )
   },
-  usePaginationKeyboard: () => {},
+  usePaginationKeyboard: () => { },
 }))
 
 // mock ProjectModal

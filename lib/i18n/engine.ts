@@ -256,20 +256,19 @@ export class I18nEngine {
     batchTranslate: (keys: string[]) => Record<string, string>
     getLocale: () => Locale
   } {
-    const engine = this
     return {
-      t(key: string, params?: Record<string, string | number>) {
-        return engine.t(`${prefix}.${key}`, params)
+      t: (key: string, params?: Record<string, string | number>) => {
+        return this.t(`${prefix}.${key}`, params)
       },
-      batchTranslate(keys: string[]) {
+      batchTranslate: (keys: string[]) => {
         const result: Record<string, string> = {}
         for (const key of keys) {
-          result[key] = engine.t(`${prefix}.${key}`)
+          result[key] = this.t(`${prefix}.${key}`)
         }
         return result
       },
-      getLocale() {
-        return engine.getLocale()
+      getLocale: () => {
+        return this.getLocale()
       },
     }
   }
