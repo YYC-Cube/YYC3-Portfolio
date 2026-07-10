@@ -90,13 +90,10 @@ export function I18nProvider({
   config,
   extraLocales,
 }: I18nProviderProps) {
-  const [locale, setLocaleState] = useState<Locale>(() => {
-    if (typeof window !== "undefined") {
-      const stored = localStorage.getItem("yyc3-locale") as Locale | null
-      if (stored && BUILTIN_LOCALES[stored]) return stored
-    }
-    return initialLocale ?? "zh-CN"
-  })
+  // 初始值统一使用默认 locale，避免 SSR/CSR hydration mismatch
+  const [locale, setLocaleState] = useState<Locale>(
+    initialLocale ?? "zh-CN"
+  )
 
   const [engine] = useState(() => {
     const eng = createEngine(locale, fallbackLocale ?? "zh-CN", config)
@@ -108,6 +105,17 @@ export function I18nProvider({
     }
     return eng
   })
+
+  // 客户端 mount 后从 localStorage 恢复语言偏好
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const stored = localStorage.getItem("yyc3-locale") as Locale | null
+      if (stored && BUILTIN_LOCALES[stored] && stored !== locale) {
+        setLocaleState(stored)
+      }
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   // 语言切换时更新 engine
   useEffect(() => {

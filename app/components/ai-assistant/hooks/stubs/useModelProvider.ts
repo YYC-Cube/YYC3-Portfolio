@@ -53,6 +53,21 @@ async function scanOllamaModels(
   baseUrl: string,
   onProgress?: (stage: string, percent: number) => void
 ): Promise<OllamaScanResult> {
+  // HTTPS 页面禁止发起 HTTP 请求（Mixed Content）
+  // 仅在页面本身也是 HTTP 或 localhost 时才扫描
+  if (typeof window !== "undefined") {
+    const pageUrl = window.location;
+    const isHttpsPage = pageUrl.protocol === "https:";
+    const isLocalOllamaUrl = baseUrl.startsWith("http://localhost") || baseUrl.startsWith("http://127.0.0.1");
+    if (isHttpsPage && isLocalOllamaUrl) {
+      return {
+        models: [],
+        status: 'offline',
+        error: 'HTTPS 页面无法连接 HTTP 本地服务，请在本地开发环境使用'
+      };
+    }
+  }
+
   try {
     onProgress?.('connecting', 10);
 
