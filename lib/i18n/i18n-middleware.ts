@@ -1,6 +1,6 @@
 /**
  * @fileoverview Next.js i18n Middleware
- * @description 基于 docs/i18n-core 示例实现的服务端语言检测中间件
+ * @description 基于 @yyc3/i18n-core 示例实现的服务端语言检测中间件
  */
 
 import type { NextRequest } from "next/server"

@@ -2,7 +2,7 @@
  * @fileoverview 服务端 i18n 工具
  * @description 提供 Next.js App Router 服务端组件的 i18n 支持
  *
- * 参考: docs/i18n-core/docs/guide/examples.md — Next.js App Router 集成
+ * 参考: @yyc3/i18n-core — Next.js App Router 集成
  */
 
 import { cookies } from "next/headers"

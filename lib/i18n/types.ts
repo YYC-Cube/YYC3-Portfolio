@@ -1,6 +1,6 @@
 /**
  * @fileoverview @yyc3/i18n-core 完整类型定义
- * @description 基于 docs/i18n-core 文档规范实现的类型系统
+ * @description 基于 @yyc3/i18n-core 文档规范实现的类型系统
  */
 
 /** 支持的所有语言 */
